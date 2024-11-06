@@ -1,6 +1,15 @@
 import React from 'react';
 
-const ResponsiveIframeGrid = ({ iframes }) => {
+interface Iframe {
+  url: string;
+  title?: string;
+}
+
+interface ResponsiveIframeGridProps {
+  iframes: Iframe[];
+}
+
+const ResponsiveIframeGrid: React.FC<ResponsiveIframeGridProps> = ({ iframes }) => {
   return (
     <div className="flex flex-wrap">
       {iframes.map((iframe, index) => (
@@ -21,7 +30,7 @@ const ResponsiveIframeGrid = ({ iframes }) => {
 
 // Example usage component
 const Page = () => {
-  const iframeUrls = [
+  const iframeUrls: Iframe[] = [
     {
       url: "http://localhost:3000/components/TotalEarnings",
       title: "Total Earnings"
