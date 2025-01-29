@@ -1,3 +1,5 @@
+
+
 import type { MDXComponents } from 'mdx/types'
 import Image, { ImageProps } from 'next/image'
  
@@ -10,7 +12,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     // Allows customizing built-in components, e.g. to add styling.
     h1: ({ children }) => (
-      <h1 style={{ color: 'red', fontSize: '24px' }}>{children}</h1>
+      <h1 style={{ color: 'black', fontSize: '24px', fontFamily:"Geist" }}>{children}</h1>
     ),
     img: (props) => (
       <Image
